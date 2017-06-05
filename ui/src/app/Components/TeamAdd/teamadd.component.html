@@ -1,0 +1,16 @@
+<h1> Bienvenue sur World Sport </h1>
+
+
+<form class="add_equipe" #form="ngForm">  
+  <br />
+  <h3>Ajouter une equipe : </h3>
+<br />
+<label>Id :  </label><input type="text" [(ngModel)]="team.id" name="id"/>
+<br /><br/>
+    <label>Equipe :  </label><input type="text" [(ngModel)]="team.nom" name="nom"/>
+    <br /><br/>
+    <label>Pays :    </label><input type="text" [(ngModel)]="team.pays" name="pays"/>
+        <br /><br/>
+    <input (click)="submit()" type="submit" value="Ajouter"/>
+</form>
+
