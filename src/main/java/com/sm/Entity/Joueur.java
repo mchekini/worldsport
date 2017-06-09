@@ -1,8 +1,5 @@
 package com.sm.Entity;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-import org.springframework.jmx.export.annotation.ManagedResource;
-
 import javax.persistence.*;
 
 /**

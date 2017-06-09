@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
-import { AuthentificationComponent } from './Components/Authentification/authentification.component';
-import { TeamAdd } from './Components/TeamAdd/teamadd.component';
+import {NgModule} from "@angular/core";
+import {RouterModule} from "@angular/router";
+import {AuthentificationComponent} from "./Components/Authentification/authentification.component";
+import {TeamAdd} from "./Components/TeamAdd/teamadd.component";
+import {TeamDetailsComponent} from "./Components/TeamDetails/teamDetails.component";
 
 
 @NgModule({
@@ -10,6 +10,7 @@ import { TeamAdd } from './Components/TeamAdd/teamadd.component';
         RouterModule.forRoot([
             {path: '', component: AuthentificationComponent},
             {path: 'add', component: TeamAdd},
+          {path: 'teamdetails', component: TeamDetailsComponent}
 
         ])
     ],
