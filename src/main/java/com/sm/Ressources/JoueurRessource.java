@@ -15,6 +15,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpSession;
 import javax.ws.rs.BeanParam;
 import java.util.List;
 import java.util.logging.Logger;
@@ -26,6 +27,7 @@ import java.util.logging.Logger;
 @RestController
 public class JoueurRessource {
 
+
     JoueurMapper joueurMapper;
 
     EquipeRepository equipeRepository;
@@ -35,6 +37,7 @@ public class JoueurRessource {
     JoueurRepository joueurRepository;
 
     SessionBean sessionBean;
+
 
     @Autowired
     Env env;
@@ -60,8 +63,9 @@ public class JoueurRessource {
     }
 
     @RequestMapping("/joueurs")
-    public String getJoueurs() {
+    public String getJoueurs(HttpSession seesion) {
         List<Joueur> liste = joueurRepository.findAll();
+
         return "test";
     }
 

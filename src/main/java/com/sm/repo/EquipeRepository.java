@@ -19,4 +19,8 @@ public interface EquipeRepository extends JpaRepository<Equipe, Long> {
     @Query("select eq.joueurList from Equipe eq where eq.nom = :teamName")
     List<Joueur> getPlayersByTeam(@Param("teamName") String teamName);
 
+    List<Equipe> findByPays(String pays);
+
+
+
 }

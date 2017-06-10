@@ -21,6 +21,7 @@ public class TeamDetailsRessource {
     @Autowired
     EquipeRepository equipeRepository;
 
+
     @Autowired
     JoueurMapper joueurMapper;
 
@@ -29,8 +30,10 @@ public class TeamDetailsRessource {
         return equipeRepository.getAllTeamName();
     }
 
+
     @RequestMapping("/teamPlayers")
     public List<JoueurDTO> findPlayersByTeam(@PathParam("teamName") String teamName) {
+
 
         return equipeRepository.getPlayersByTeam(teamName)
                 .stream()
